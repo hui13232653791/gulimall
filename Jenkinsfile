@@ -5,11 +5,11 @@ pipeline {
     }
   }
   environment {
-    DOCKER_CREDENTIAL_ID = 'dockerhub-id'
+    DOCKER_CREDENTIAL_ID = 'aliyunhub-id'
     GITEE_CREDENTIAL_ID = 'gitee-id'
     KUBECONFIG_CREDENTIAL_ID = 'kubeconfig-id'
-    REGISTRY = 'docker.io'
-    DOCKERHUB_NAMESPACE = 'hui13232653791'
+    REGISTRY = 'registry.cn-hangzhou.aliyuncs.com'
+    DOCKERHUB_NAMESPACE = 'gulimall_wangyh'
     GITEE_ACCOUNT = 'qq7816073!!'
     SONAR_CREDENTIAL_ID = 'sonar-qube'
     BRANCH_NAME = 'prod'
@@ -70,7 +70,7 @@ pipeline {
 
   }
   parameters {
-    string(name: 'PROJECT_VERSION', defaultValue: 'v0.0Beta', description: '')
-    string(name: 'PROJECT_NAME', defaultValue: 'gulimall-gateway', description: '')
+    string(name: 'PROJECT_VERSION', defaultValue: 'v0.0Beta', description: '项目版本')
+    string(name: 'PROJECT_NAME', defaultValue: 'gulimall-gateway', description: '构建模块')
   }
 }
