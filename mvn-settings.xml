@@ -6,19 +6,18 @@
             <name>阿里云公共仓库</name>
             <url>https://maven.aliyun.com/repository/public</url>
         </mirror>
-
-        <profile>
-            <id>jdk-1.8</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <jdk>1.8</jdk>
-            </activation>
-
-            <properties>
-                <maven.compiler.source>1.8</maven.compiler.source>
-                <maven.compiler.target>1.8</maven.compiler.target>
-                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-            </properties>
-        </profile>
     </mirrors>
+    <profile>
+        <id>jdk-1.8</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+            <jdk>1.8</jdk>
+        </activation>
+
+        <properties>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+            <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+        </properties>
+    </profile>
 </settings>
