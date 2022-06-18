@@ -9,6 +9,11 @@ spring:
       discovery:
         server-addr: nacos-service.gulimall:8848
     alicloud:
+      access-key: LTAI5tCVUQn6rF7yiRp4maZn
+      secret-key: jXB8hM5UAZXOQBoF8aFZYkdBOpqSv5
+      oss:  
+        endpoint: oss-cn-guangzhou.aliyuncs.com
+        bucket: gulimall-wangyh 
       sms:
         host: https://dfsns.market.alicloudapi.com
         path: /data/send_sms
