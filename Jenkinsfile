@@ -10,7 +10,7 @@ pipeline {
     KUBECONFIG_CREDENTIAL_ID = 'kubeconfig-id'
     REGISTRY = 'registry.cn-hangzhou.aliyuncs.com'
     DOCKERHUB_NAMESPACE = 'gulimall_wangyh'
-    GITEE_ACCOUNT = 'qq7816073!!'
+    GITEE_ACCOUNT = 'hui13232653791'
     SONAR_CREDENTIAL_ID = 'sonar-qube'
     BRANCH_NAME = 'prod'
   }
