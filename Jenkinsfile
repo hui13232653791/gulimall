@@ -26,6 +26,22 @@ pipeline {
       }
     }
 
+    stage('sonar代码质量分析') {
+      steps {
+        container('maven') {
+          withCredentials([string(credentialsId: "$SONAR_CREDENTIAL_ID", variable: 'SONAR_TOKEN')]) {
+            withSonarQubeEnv('sonar') {
+              sh 'echo 当前目录 `pwd`'
+              sh "mvn sonar:sonar -gs `pwd`/mvn-settings.xml -Dsonar.branch=$BRANCH_NAME -Dsonar.login=$SONAR_TOKEN"
+            }
+          }
+          timeout(time: 1, unit: 'HOURS') {
+            waitForQualityGate true
+          }
+        }
+      }
+    }
+
     stage ('构建镜像-推送镜像') {
       steps {
         container ('maven') {
